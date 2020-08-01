@@ -1,3 +1,5 @@
+#libraries and files used:
+
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
@@ -6,6 +8,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationE
 from Flask_Blog.models import User
 
 #code for the registration page:
+
 class RegistrationForm(FlaskForm):
     username = StringField('Username',
                            validators=[DataRequired(), Length(min=2, max=20)])
@@ -26,6 +29,7 @@ class RegistrationForm(FlaskForm):
         if user:
             raise ValidationError('That email is taken. Please choose a different one.')
 
+#code for the login page:
 
 class LoginForm(FlaskForm):
     email = StringField('Email',
@@ -34,6 +38,7 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
 
+#code for any user updates:
 
 class UpdateAccountForm(FlaskForm):
     username = StringField('Username',
