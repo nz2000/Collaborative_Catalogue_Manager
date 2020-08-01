@@ -1,3 +1,5 @@
+#This file uses OOP to create classes which serve as the basis to the site's functioning
+
 from datetime import datetime
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from Flask_Blog import db, login_manager, app

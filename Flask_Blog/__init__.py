@@ -1,3 +1,5 @@
+#This file contains the code to the initializations made while development
+
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy

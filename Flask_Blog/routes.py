@@ -1,3 +1,5 @@
+#This file contains the code for redirecting the user upon page changes
+
 import os
 import secrets
 from PIL import Image
